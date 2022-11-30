@@ -1,0 +1,16 @@
+# Vs Code
+/.vscode/
+/.history/
+
+# Python3
+venv/
+__pycache__/
+/redis
+.env
+/.env
+azure-pipelines.yml
+*.yml
+__pycache__
+docker-compose.ymltest
+Dockerfile
+/temp
