@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftiflux.com%2Fblog%2Forganizar-os-catalogos%2F&psig=AOvVaw3mrAYgB88RPPj3yeWTn6PO&ust=1669962117459000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjPqfPj1_sCFQAAAAAdAAAAABAE" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Catálogo de Serviços</h3>
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Projeto feito em Django com PostgresSQL para controle de cadastro de Serviços.
     <br> 
 </p>
 
@@ -45,7 +45,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```
-Give examples
+python 3.10 > | Docker 
 ```
 
 ### Installing
@@ -55,7 +55,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+pip install -r requirements.txt
 ```
 
 And repeat
@@ -64,7 +64,7 @@ And repeat
 until finished
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+<!-- End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
@@ -83,8 +83,8 @@ Give an example
 Explain what these tests test and why
 
 ```
-Give an example
-```
+Give an example -->
+<!-- ```
 
 ## 🎈 Usage <a name="usage"></a>
 
@@ -99,15 +99,14 @@ Add additional notes about how to deploy this on a live system.
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Express](https://expressjs.com/) - Server Framework
 - [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [NodeJs](https://nodejs.org/en/) - Server Environment -->
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Authors <a name = "Pedro Augusto Canedo Araujo Obalhe"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@pedro-canedo](https://github.com/pedro-canedo) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/pedro-canedo) who participated in this project.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Hat tip to anyone whose code was used
 - Inspiration
