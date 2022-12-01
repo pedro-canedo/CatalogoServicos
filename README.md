@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://portal.unila.edu.br/proagi/ctic/imagens-ctic/banner-catalogo-servicos-v2.png/@@images/a96dc99c-88d2-4ca8-9bdc-ac36bb8a9912.png" alt="Project logo"></a>
+ <img width=200px height=400px src="https://portal.unila.edu.br/proagi/ctic/imagens-ctic/banner-catalogo-servicos-v2.png/@@images/a96dc99c-88d2-4ca8-9bdc-ac36bb8a9912.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Catálogo de Serviços</h3>
