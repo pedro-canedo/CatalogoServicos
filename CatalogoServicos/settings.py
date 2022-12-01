@@ -80,12 +80,13 @@ WSGI_APPLICATION = 'catalogoServicos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        'USER': 'pedrobalhe',
-        'PASSWORD':'desenvolvimento.123',
-        'HOST':'pedrodb.postgres.database.azure.com',
-        'PORT':'5432',
+        'ENGINE': os.getenv('ENGINE'),
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
+        
     }
 }
 
