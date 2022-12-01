@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Tarefas{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div ">
+    <h1>Catalogo de serviços</h1>
+
+    <div class="col-9 search-div">
+        <a id="add-link" href="newtask/">
+            <div class="col-2 add-div">
+                <i class="fas fa-plus"></i>Serviço
+            </div>
+        </a>
+        <div class="col-5 search-div">
+            <form method="GET" id="search-form">
+                <input class="form-control" type="text" id="search" name="search"
+                        
+                    placeholder="Busque por perfil de Senioridade" value="{{ request.GET.filtra_por_perfil }}">
+                <i class="fas fa-search" id="search-btn"></i>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="row tm-content-row tm-mt-big">
+        <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-products">
+                <div class="tm-product table-responsive">
+                    <table class="table table-dark tm-table-striped-even mt-3">
+                        <thead>
+                            <tr class="tm-bg-gray">
+                                <th scope="col">Nome</th>
+                                <th scope="col">Complexidade</th>
+                                <th scope="col">Escopo</th>
+                                <th scope="col">Tempo Limite</th>
+                                <th scope="col">Entregáveis</th>
+                                <th scope="col">Atividades Desempenhadas</th>
+                                <th scope="col">Perfil Exigido </th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if tasks %}
+                            {% for task in tasks %}
+                            <tr>
+                                <td>{{ task.nome }}</td>
+                                <td>{{ task.complexidade }}</td>
+                                <td>{{ task.escopo }}</td>
+                                <td>{{ task.tempo_limite }}</td>
+                                <td>{{ task.entregaveis }}</td>
+                                <td>{{ task.perfil_exigido }}</td>
+                                <td>{{ task.atividades_desempenhadas }}</td>
+                                <td>
+                                    <a href="edittask/{{ task.id }}" class="tm-product-delete-link">
+                                        <i class="far fa-edit tm-product-delete-icon"></i>
+                                    </a>
+                                    <a href="deletetask/{{ task.id }}" class="tm-product-delete-link">
+                                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan="8" class="text-center">Nenhum serviço cadastrado no momento</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="pagination">
+        <span class="step-links">
+            {% if tasks.has_previous %}
+                <a href="?page={{ tasks.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+            
+            {% if tasks.paginator.num_pages %}
+            <span class="current">
+                {{ tasks.number }} de {{ tasks.paginator.num_pages }}
+            </span>
+            {% endif %}
+        
+            {% if tasks.has_next %}
+                <a href="?page={{ tasks.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+        </span> -->
+</div>
+</div>
+{% endblock %}
