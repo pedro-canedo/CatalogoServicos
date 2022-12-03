@@ -63,8 +63,7 @@ docker compose -f "docker-compose.yml" up -d --build
 
 ```
 
-after that you can access the admin page with the following credentials
-Open cli from docker container
+if you want to access the admin panel, you will need to create an admin account, for this just access the docker cli and run the following command.
 
 ```bash
 python manage.py createsuperuser
