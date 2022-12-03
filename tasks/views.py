@@ -42,26 +42,18 @@ def newTask(request):
 @login_required
 def editTask(request, id):
     task = get_object_or_404(Task, pk=id)
-    form = TaskForm(instance=task)
-
-    if(request.method == 'POST'):
-        form = TaskForm(request.POST, instance=task)
-
-        if(form.is_valid()):
-            task.save()
-            return redirect('/')
-        else:
-            return render(request, 'task/edittask.html', {'form': form, 'task': task})
-    else:
-        return render(request, 'tasks/edittask.html', {'form': form, 'task': task})
+    form = TaskForm(request.POST or None, instance=task)
+    if form.is_valid():
+        form.save()
+        messages.success(request, 'Tarefa atualizada com sucesso!')
+        return redirect('/')
+    return render(request, 'tasks/addtask.html', {'form': form})
 
 @login_required
 def deleteTask(request, id):
     task = get_object_or_404(Task, pk=id)
     task.delete()
-
-    messages.info(request, 'Tarefa deletada com sucesso.')
-
+    messages.success(request, 'Tarefa excluída com sucesso!')
     return redirect('/')
 
 @login_required

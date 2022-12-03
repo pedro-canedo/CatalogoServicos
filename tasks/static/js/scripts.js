@@ -7,7 +7,6 @@ $( document ).ready(function() {
     var filter     = $('#filter');
     
     $(deleteBtn).on('click', function(e) {
-
         e.preventDefault();
 
         var delLink = $(this).attr('href');

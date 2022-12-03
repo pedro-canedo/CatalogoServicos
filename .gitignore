@@ -11,6 +11,6 @@ __pycache__/
 azure-pipelines.yml
 *.yml
 __pycache__
-docker-compose.ymltest
-Dockerfile
 /temp
+.data
+/.data

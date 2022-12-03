@@ -27,6 +27,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,13 +80,25 @@ WSGI_APPLICATION = 'CatalogoServicos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB'),  # postgres
-        'USER': os.getenv('POSTGRES_USER'),  # postgres
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),  # postgres
-        'HOST': os.getenv('DB_HOST'),  # localhost
-        'PORT': '5433',
+        'NAME':'db',  # postgres
+        'USER':'postgres',  # postgres
+        'PASSWORD':'postgres',  # postgres
+        'HOST':'localhost',  # localhost
+        'PORT':5433,
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'postgres',  # postgres
+#         'USER':'postgres',  # postgres
+#         'PASSWORD':'postgres',  # postgres
+#         'HOST':'db',  # localhost
+#         'PORT':543,
+#     }
+# }
 
 
 # Password validation
