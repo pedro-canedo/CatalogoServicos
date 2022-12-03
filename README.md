@@ -72,13 +72,13 @@ Open cli from docker container
 python manage.py createsuperuser
 ```
 
-after get migrations
+Now you need to run a migration with the following command in your docker cli
 
 ```bash 
 python manage.py migrate
 ```
 
-God, now restart your container with name webAppCatalogoServicos frist
+Good, now restart your container with name webAppCatalogoServicos frist
 
 ```bash
 docker restart webAppCatalogoServicos
