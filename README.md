@@ -58,11 +58,33 @@ Say what the step will be
 pip install -r requirements.txt
 ```
 
-And repeat
+start the server with docker-compose
 
 ```
-until finished
+docker compose -f "docker-compose.yml" up -d --build
+
 ```
+
+after that you can access the admin page with the following credentials
+Open cli from docker container
+
+```bash
+python manage.py createsuperuser
+```
+
+after get migrations
+
+```bash 
+python manage.py migrate
+```
+
+God, now restart your container with name webAppCatalogoServicos frist
+
+```bash
+docker restart webAppCatalogoServicos
+```
+
+Ok now the server is running on http://localhost:8000
 
 <!-- End with an example of getting some data out of the system or using it for a little demo.
 
