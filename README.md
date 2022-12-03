@@ -115,10 +115,11 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment -->
+- [Django](https://www.djangoproject.com/) - Web Framework
+- [PostgresSQL](https://www.postgresql.org/) - Database
+- [Docker](https://www.docker.com/) - Container
+
+
 
 ## ✍️ Authors <a name = "Pedro Augusto Canedo Araujo Obalhe"></a>
 
