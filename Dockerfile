@@ -23,7 +23,5 @@ RUN pip install -r requirements.txt
 
 RUN python manage.py makemigrations
 
-#rodar o executavel antes de rodar o servidor
-
 CMD [ "python", "manage.py", "migrate"] 
 

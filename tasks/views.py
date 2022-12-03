@@ -10,14 +10,15 @@ from .models import Task
 @login_required
 def lista_servicos(request):
     
-    tasks = Task.objects.all()
+    search = request.GET.get('search')
+    
+    if search:
+        tasks = Task.objects.filter(complexidade__icontains=search)
+    else:
+        tasks = Task.objects.all()
     return render(request, 'tasks/list.html', 
         {'tasks':tasks})
 
-@login_required
-def taskView(request, id):
-    task = get_object_or_404(Task, pk=id)
-    return render(request, 'tasks/task.html', {'task': task})
 
 
 @login_required
@@ -56,16 +57,5 @@ def deleteTask(request, id):
     messages.success(request, 'Tarefa excluída com sucesso!')
     return redirect('/')
 
-@login_required
-def changeStatus(request, id):
-    task = get_object_or_404(Task, pk=id)
 
-    if(task.done == 'doing'):
-        task.done = 'done'
-    else:
-        task.done = 'doing'
-
-    task.save()
-
-    return redirect('/')
 

@@ -96,7 +96,7 @@ DATABASES = {
 #         'USER':'postgres',  # postgres
 #         'PASSWORD':'postgres',  # postgres
 #         'HOST':'db',  # localhost
-#         'PORT':543,
+#         'PORT':5432,
 #     }
 # }
 
