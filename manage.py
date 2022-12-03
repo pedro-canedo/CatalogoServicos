@@ -2,8 +2,11 @@
 import os
 import sys
 
+from config.env_gen import generate_env
+
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'catalogoServicos.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CatalogoServicos.settings')
+    generate_env()
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
